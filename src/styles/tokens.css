@@ -1,0 +1,67 @@
+:root {
+  /* ── Colors: Background ── */
+  --color-bg:           #080d14;
+  --color-bg-subtle:    #0d1520;
+  --color-bg-surface:   #111d2b;
+  --color-bg-elevated:  #162436;
+
+  /* ── Colors: Accent (Mango Amber) ── */
+  --color-accent:       #f0a500;
+  --color-accent-light: #ffc940;
+  --color-accent-muted: rgba(212, 114, 10, 0.15);
+  --color-accent-glow:  rgba(212, 114, 10, 0.35);
+
+  /* ── Colors: Text ── */
+  --color-text:         #e8e0d4;
+  --color-text-muted:   #7a8a9a;
+  --color-text-faint:   #3d5166;
+
+  /* ── Colors: Border ── */
+  --color-border:       #1e2e40;
+  --color-border-hover: rgba(212, 114, 10, 0.4);
+
+  /* ── Typography: Font Families ── */
+  --font-serif: 'DM Serif Display', serif;
+  --font-mono:  'JetBrains Mono', monospace;
+  --font-sans:  'Outfit', sans-serif;
+
+  /* ── Layout ── */
+  --section-padding-x: clamp(24px, 5vw, 64px);
+  --section-padding-y: clamp(72px, 10vw, 128px);
+  --max-width:         1280px;
+  --content-width:     780px;
+
+  /* ── Border Radius ── */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:     0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md:     0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg:     0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 8px 24px var(--color-accent-glow);
+  --shadow-glow:   0 0 12px var(--color-accent-glow);
+
+  /* ── Transitions ── */
+  --duration-fast:   150ms;
+  --duration-base:   200ms;
+  --duration-slow:   300ms;
+  --duration-slower: 500ms;
+  --ease-default:    ease;
+  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:     cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Z-Index Scale ── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 50;
+  --z-nav:     100;
+  --z-modal:   200;
+
+  /* ── Grid Texture ── */
+  --grid-color: rgba(212, 114, 10, 0.04);
+  --grid-size:  60px;
+}
