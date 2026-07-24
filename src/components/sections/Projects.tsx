@@ -19,19 +19,25 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       className="reveal bg-[var(--color-bg-surface)] border border-[var(--color-border)] p-9 relative overflow-hidden group hover:border-[var(--color-border-hover)] hover:-translate-y-1 hover:shadow-[var(--shadow-lg)] transition-all duration-[var(--duration-slow)]"
       style={{ transitionDelay: `${index * STAGGER_DELAY_MS}ms` }}
     >
-      {/* Bottom accent line — amber */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-[var(--duration-slow)]"
-        style={{ background: `linear-gradient(90deg, var(--color-accent), transparent)` }}
+      {/* Bottom accent line */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-[var(--duration-slow)]"
+        style={{ background: 'linear-gradient(90deg, var(--color-accent), transparent)' }}
       />
 
-      {/* Project number — amber */}
       <p className="font-mono text-xs tracking-widest mb-5" style={{ color: 'var(--color-accent)' }}>
-        {project.number}{project.featured ? ' — Featured' : ''}
+        {project.number}{project.featured ? ' - Featured' : ''}
       </p>
 
       <h3 className="font-serif text-2xl text-[var(--color-text)] mb-3 leading-tight">
         {project.title}
       </h3>
+
+      {(project.date || project.context) && (
+        <p className="font-mono text-xs text-[var(--color-text-muted)] tracking-widest uppercase mb-4">
+          {[project.date, project.context].filter(Boolean).join(' / ')}
+        </p>
+      )}
 
       <p className="text-base text-[var(--color-text-muted)] leading-relaxed mb-6">
         {project.description}
@@ -53,7 +59,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             className="font-mono text-xs tracking-widest uppercase flex items-center gap-1.5 hover:gap-3 transition-all duration-[var(--duration-base)]"
             style={{ color: 'var(--color-accent)' }}
           >
-            {link.label} →
+            {link.label} -&gt;
           </a>
         ))}
       </div>

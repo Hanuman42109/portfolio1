@@ -31,35 +31,31 @@ export default function Hero() {
         >
           {personal.name.first}
           <br />
-          {/* Last name in amber for the two-accent interplay */}
           <em className="italic" style={{ color: 'var(--color-accent)' }}>
             {personal.name.last}
           </em>
         </h1>
 
         {/* Tagline */}
-        <p className="text-[var(--color-text-muted)] text-lg leading-relaxed max-w-lg mb-12 opacity-0 animate-fade-up delay-3">
+        <p className="text-[var(--color-text-muted)] text-lg leading-relaxed max-w-2xl mb-12 opacity-0 animate-fade-up delay-3">
           {personal.tagline}
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 opacity-0 animate-fade-up delay-4">
           <Button variant="primary" href="#projects">
-            View Projects <span aria-hidden>→</span>
+            View Projects <span aria-hidden>-&gt;</span>
           </Button>
           <Button variant="outline" href={personal.contact.github} target="_blank" rel="noreferrer">
             GitHub
           </Button>
-          <Button variant="outline" href={`mailto:${personal.contact.email}`}>
-            Get in Touch
-          </Button>
         </div>
       </div>
 
-      {/* Stats — numbers in amber, labels in muted */}
-      <div className="absolute bottom-16 right-[var(--section-padding-x)] hidden lg:flex gap-12 opacity-0 animate-fade-up delay-5">
+      {/* Stats: numbers in amber, labels in muted */}
+      <div className="absolute bottom-16 right-[var(--section-padding-x)] hidden lg:flex items-end gap-9 opacity-0 animate-fade-up delay-5">
         {stats.map((stat) => (
-          <div key={stat.label} className="text-right">
+          <div key={stat.label} className="min-w-[112px] text-right">
             <div className="font-serif text-4xl leading-none" style={{ color: 'var(--color-accent)' }}>
               {stat.num}
             </div>

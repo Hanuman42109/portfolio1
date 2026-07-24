@@ -5,11 +5,12 @@ export const personal = {
     full: 'Chanukya Chilamkuri',
     initials: 'CC',
   },
-  title: 'Full-Stack Software Engineer',
+  title: 'Forward Deployed Engineer',
   tagline:
-    '3 years of production experience building cross-platform web and mobile applications. React Native, TypeScript, Node.js, AWS. Currently pursuing an MS in Computer Science. CPT eligible, immediate start.',
+    'Forward Deployed Engineer with 3+ years of production software engineering experience designing, building, and shipping agentic AI and full-stack systems directly for end customers.',
   location: 'King of Prussia, PA',
-  availability: 'CPT Eligible · Immediate Start',
+  availability: 'Immediate full-time availability',
+  resumeUrl: '/Chanukya-Chilamkuri-Resume-FDE.pdf',
   contact: {
     email: 'chanukyasrinivas99@gmail.com',
     github: 'https://github.com/Hanuman42109',
