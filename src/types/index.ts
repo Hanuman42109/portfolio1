@@ -38,6 +38,8 @@ export interface ProjectLink {
 export interface Project {
   number: string
   title: string
+  date?: string
+  context?: string
   description: string
   tech: string[]
   links: ProjectLink[]

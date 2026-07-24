@@ -2,6 +2,13 @@ import { useState, useEffect } from 'react'
 import { navLinks } from '@/data'
 import { personal } from '@/config/personal'
 
+const ContactIcon = () => (
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+    <polyline points="22,6 12,12 2,6" />
+  </svg>
+)
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -49,6 +56,26 @@ export default function Navbar() {
         ))}
       </ul>
 
+      {/* Desktop utility actions */}
+      <div className="hidden md:flex items-center gap-5">
+        <a
+          href={personal.resumeUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-xs text-[var(--color-text)] hover:text-[var(--color-accent)] tracking-widest uppercase transition-colors duration-[var(--duration-base)]"
+        >
+          Resume
+        </a>
+        <a
+          href={`mailto:${personal.contact.email}`}
+          aria-label="Contact"
+          title="Contact"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent-light)] transition-colors duration-[var(--duration-base)]"
+        >
+          <ContactIcon />
+        </a>
+      </div>
+
       {/* Mobile hamburger */}
       <button
         className="md:hidden flex flex-col gap-1.5 p-1"
@@ -86,6 +113,23 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href={personal.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            onClick={closeMenu}
+            className="block px-[var(--section-padding-x)] py-4 font-mono text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] tracking-widest uppercase border-b border-[var(--color-border)] transition-colors duration-[var(--duration-base)]"
+          >
+            Resume
+          </a>
+          <a
+            href={`mailto:${personal.contact.email}`}
+            onClick={closeMenu}
+            className="flex items-center gap-3 px-[var(--section-padding-x)] py-4 font-mono text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] tracking-widest uppercase transition-colors duration-[var(--duration-base)]"
+          >
+            <ContactIcon />
+            Contact
+          </a>
         </div>
       )}
     </nav>
