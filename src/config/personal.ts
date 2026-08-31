@@ -10,7 +10,7 @@ export const personal = {
     'Forward Deployed Engineer with 3+ years of production software engineering experience designing, building, and shipping agentic AI and full-stack systems directly for end customers.',
   location: 'King of Prussia, PA',
   availability: 'Immediate full-time availability',
-  resumeUrl: '/Chanukya-Resume-FDE.pdf',
+  resumeUrl: '/Chanukya-Resume-FDE1.pdf',
   contact: {
     email: 'chanukyasrinivas99@gmail.com',
     github: 'https://github.com/Hanuman42109',
