@@ -63,9 +63,11 @@ function CertCard({ cert, index }: CertCardProps) {
         <p className="font-mono text-sm text-[var(--color-text-muted)]">
           {cert.issuer}
         </p>
-        <p className="font-mono text-xs text-[var(--color-accent)] tracking-widest uppercase mt-2">
-          {cert.date}
-        </p>
+        {cert.date && (
+          <p className="font-mono text-xs text-[var(--color-accent)] tracking-widest uppercase mt-2">
+            {cert.date}
+          </p>
+        )}
       </div>
     </div>
   )
